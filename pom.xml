@@ -29,6 +29,13 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven.compiler.plugin.version}</version>
         <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <mainClass>com.mypackage.MyClass</mainClass>
+            </manifest>
+          </archive>
           <source>${jdk.version}</source>
           <target>${jdk.version}</target>
         </configuration>
