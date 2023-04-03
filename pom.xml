@@ -31,7 +31,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.mypackage.MyClass</mainClass>
+              <mainClass>com.coveros.demo.helloworld.HelloWorld</mainClass>
             </manifest>
           </archive>
           <source>${jdk.version}</source>
