@@ -19,7 +19,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <jdk.version>1.8</jdk.version>
 
-    <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+    <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
   </properties>
 
   <build>
@@ -27,14 +27,15 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>3.2.0</version>
+        <version>${maven.jar.plugin.version}</version>
         <configuration>
           <archive>
             <manifest>
-              <addClasspath>true</addClasspath>
               <mainClass>com.coveros.demo.helloworld.HelloWorld</mainClass>
             </manifest>
           </archive>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
         </configuration>
       </plugin>
     </plugins>
